@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face{ 
+    font-family: titulo;
+    src: url("../assets/Fonts/winterbeauty-Script.otf");
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    position: fixed;
+    margin-top: -20vh;
+}
+
+
+header nav {
+    width: 100vw;
+    height: 20vh; 
+    display: grid;
+    position: fixed;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: "logo . . historia servicios productos contacto" ;
+    background-image: linear-gradient(to right, red , yellow);
+   
+   
+}
+header nav div{
+    margin: 5px;
+    padding: 10px;
+}
+
+/* HEADER  */
+
+#historia{
+    grid-area: historia;
+    background-color: brown;
+}
+
+#servicios{
+    grid-area: servicios;
+    background-color: brown;
+}
+
+#productos{
+    grid-area: productos;
+    background-color: brown;
+}
+
+#contactos{
+    grid-area: contacto;
+    background-color: brown;
+}
+
+#logo {
+    grid-area: logo;
+}
+
+.estiloLogo {
+    width: 80px;
+    height: 80px;  
+
+    transition: 1s;
+}
+.estiloLogo:hover {
+    width: 100px;
+    height: 100px;
+}
+
+.botones { 
+    align-self: center;
+    justify-self: center;
+    padding: 15px;
+    border-radius: 5px;
+    color: azure;
+
+    perspective: 2500;
+    transition: 2s ease;
+}
+.botones a{
+    text-decoration: none;  
+    color: azure; 
+}
+
+.botones:hover {
+    transform: rotate(360deg);
+}
+
+/* MAIN  */
+
+main {
+    width: 100vw;
+    height: 70vh;
+    margin: 20vh 0 -5vh 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+#texto{
+    width: 50vw;
+
+}
+
+#imagen{
+    width: 50vw;
+}
+
+#imagen img{
+    width: 500px;
+    height: 400px;
+}
+
+/* FOOTER  */
+
+footer {
+    width: 100vw;
+    height: 15vh; 
+    position: fixed;
+    /* margin-bottom: -15vh; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: linear-gradient(to right, red , yellow);
+
+}
+
+/* HISTORIA PAGE  */
+
+#mainHistoria{
+    flex-direction: column;
+    
+
+}
+
+#mainHistoria p{
+    text-align: justify;
+    margin: 0 20px 0 20px;
+    
+
+}
+
+#imgHistoria {
+        width: 50vw;
+        height: 80px;
+
+}
+#tituloHistoria{
+    margin: 10px;
+    padding: 10px;
+    font-family: titulo;
+    font-size: 4em;
+}
+
+@media only screen and (max-width: 1000px) { 
+    main {
+        flex-direction: column;
+    }
+    #imagen img{
+        width: 425px;
+        height: 325px;
+    }
+    
+}
+
+@media only screen and (max-width: 768px) { 
+    body {
+        height: 150vh;
+    }
+    main{
+        flex-direction: column;  
+        height: 120vh; 
+      
+       
+}
+   
+    #imagen img{
+        width: 300px;
+        height: 200px;
+       
+}
+    #tituloHistoria{
+        font-size: 3em;
+    }
+    #mainIndex {
+        height: 110vh;
+        margin-top: -80px;
+        }
+    #mainHistoria{
+        height: 110vh;
+        margin-top: 10px;
+
+}
+@media only screen and (max-width: 480px) { 
+    body {
+        height: 150vh;
+    }
+    header {
+        position: inherit;
+        margin-top: 0vh;
+        height: 20vh;
+        background-color: blanchedalmond;
+    }
+
+    header nav {
+        
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: "logo . . historia servicios" 
+                             "logo . . productos contacto";
+
+        background-color: blanchedalmond;
+    
+    }
+
+    footer {
+        position: inherit;
+       
+    }
+  
+
+
+    #imagen img{
+        width: 250px;
+        height: 150px;
+        margin-left: -20px;
+   
+    }
+
+    #tituloHistoria{
+        font-size: 2em;
+    }
+
+    #mainIndex {
+        height: 110vh;
+        margin-top: -80px;
+    }
+
+    #mainHistoria{
+        height: 110vh;
+        margin-top: 10px;
+    
+    }
+       
+    
+}
+}
+@media only screen and (max-width: 360px) {
+    body {
+        height: 150vh;
+    }
+    #mainIndex {
+        height: 110vh;
+        margin-top: -100px;
+    }
+    #mainHistoria{
+        height: 110vh;
+        margin-top: 10px;
+
+    }
+}
