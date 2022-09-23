@@ -176,6 +176,10 @@ footer {
 
 /* HISTORIA PAGE  */
 
+#bodystory {
+    height: 100vh !important;
+}
+
 #mainHistoria{
     display: flex !important;
     flex-direction: column ;
